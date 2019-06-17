@@ -70,12 +70,12 @@ public class Road_construction_3 {
 	                 continue; 
 	             }
 	             if (dist[x][y] > dist[curr.x][curr.y] + grid[x][y]) { 
-	                 if (dist[x][y] != Integer.MAX_VALUE) {
-	                	 cell prev = new cell(x, y, dist[x][y]); 
-	                     st.remove(prev); 
+	                 cell prev = new cell(x, y, dist[x][y]);
+			 if (dist[x][y] != Integer.MAX_VALUE) {
+	                	st.remove(prev); 
 	                 }	                 
 	                 dist[x][y] = dist[curr.x][curr.y] + grid[x][y]; 
-	                 st.add(new cell(x, y, dist[x][y])); 
+	                 st.add(prev); 
 	             } 
 	         } 
 	    }
