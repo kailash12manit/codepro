@@ -3,7 +3,6 @@ package Questions_previous_Test;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Road_construction_3 {
 	int N;
@@ -70,12 +69,12 @@ public class Road_construction_3 {
 	                 continue; 
 	             }
 	             if (dist[x][y] > dist[curr.x][curr.y] + grid[x][y]) { 
-	                 cell prev = new cell(x, y, dist[x][y]);
-			 if (dist[x][y] != Integer.MAX_VALUE) {
-	                	st.remove(prev); 
+	                 if (dist[x][y] != Integer.MAX_VALUE) {
+	                	 cell prev = new cell(x, y, dist[x][y]); 
+	                     st.remove(prev); 
 	                 }	                 
 	                 dist[x][y] = dist[curr.x][curr.y] + grid[x][y]; 
-	                 st.add(prev); 
+	                 st.add(new cell(x, y, dist[x][y])); 
 	             } 
 	         } 
 	    }

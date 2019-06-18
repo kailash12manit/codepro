@@ -2,7 +2,8 @@ package Questions_previous_Test;
 
 import java.util.Scanner;
 
-public class Main {
+public class Smart_air_conditioning_sensor_module_verification {
+
 	int N;				//	Number of commands
 	int exit_flag = 0; 	// Variable 1 indicating the Power OFF standby state is in the Power OFF standby state
 	int previous=0;
@@ -83,7 +84,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		Main m = new Main();
+		Smart_air_conditioning_sensor_module_verification m = new Smart_air_conditioning_sensor_module_verification();
 
 		m.inputData();				//	Input function
 		m.solve();					//	Output answer

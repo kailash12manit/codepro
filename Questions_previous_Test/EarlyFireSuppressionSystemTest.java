@@ -1,21 +1,19 @@
 package Questions_previous_Test;
 
 public class EarlyFireSuppressionSystemTest {
+
 	public static void main(String[] args) {
 		System.out.println("EarlyFireSuppressionSystemTest");
 	}
 }
 /*
-
 import dcs.ControlSystem;
 import dcs.FireSensor;
 import dcs.Position;
 import dcs.TestUtils;
-
 // The test target is implemented as shown annotation below. 
 // If necessary, write the test input and test code in the LedTest class, referring to the annotation below. 
 // NOTE: The code under test is already included in the build, do not use and release the following annotations.
-
 /**
  * Position.java
  * (y, x) Data structure representing location information 
@@ -29,19 +27,16 @@ public class Position {
 	... (Appropriate equals are implemented)
 }
 ...
-
 /**
  * FireSensor.java
  *  Fire detection sensor interface
  *
 public interface FireSensor {
-
 	**
 	 * Returns the position value of the sensor that detected the current fire
 	 * @return Position type coordinates.
 	 *
 	Position getSensorPosition();
-
 }
 ...
 */
@@ -53,7 +48,6 @@ public interface FireSensor {
 public class ControlSystem {
 	...
 	private FireSensor sensor;
-
 	public ControlSystem(FireSensor sensor) {
 		this.sensor = sensor;
 		...
@@ -73,7 +67,6 @@ public class ControlSystem {
 		int dx = issued.x - currentDrone1.x;
 		int dy = issued.y - currentDrone1.y;
 		int dist1 = (dx * dx) + (dy * dy);
-
 		dx = issued.x - currentDrone2.x;
 		dy = issued.y - currentDrone2.y;
 		int dist2 = (dx * dx) + (dy * dy);
@@ -84,7 +77,6 @@ public class ControlSystem {
 		
 		return (dist2>=dist1) ? 1 : 2;
 	}
-
 }
 */
 /*
@@ -99,7 +91,6 @@ class test_class implements FireSensor{
 			return pos;
 		}	
 	}
-
 public class DroneControlSystemTest {
 	
 	// Problem 1.	
@@ -147,7 +138,6 @@ public class DroneControlSystemTest {
 		dcs.selectDrone();
 		
 	}
-
 	public void test_3_2() {
 		// TODO: Item 3-2. 
 		// A test code to reproduce the situation in which the fire position is detected in the order of sensors 3, 1, 4, 6, 2
